@@ -133,15 +133,13 @@ function createWindow() {
 }
 
 function createTray() {
-  // Create tray icon
-  const iconPath = process.platform === 'darwin'
-    ? path.join(__dirname, 'assets/icon.png')
-    : path.join(__dirname, 'assets/icon.png');
+  // Create tray icon using template image for dark mode support
+  const iconPath = path.join(__dirname, 'assets/iconTemplate.png');
 
   const icon = nativeImage.createFromPath(iconPath);
-  const resizedIcon = icon.resize({ width: 16, height: 16 });
+  icon.setTemplateImage(true); // Enable automatic dark/light mode adaptation
 
-  tray = new Tray(resizedIcon);
+  tray = new Tray(icon);
   tray.setToolTip('Confer');
 
   const contextMenu = Menu.buildFromTemplate([
