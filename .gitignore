@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+out/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+
+# Electron
+*.app
+*.dmg
+*.pkg
+
+# Generated icons (keep the source)
+assets/icon.iconset/
