@@ -36,13 +36,12 @@ npm run build:mac
 
 **Signed & notarized build (for distribution):**
 
-See [CODE_SIGNING_SETUP.md](CODE_SIGNING_SETUP.md) for complete setup instructions.
-
+Quick setup with automated script:
 ```bash
-# After setting up code signing credentials:
-export $(cat .env | xargs)
-npm run build:mac
+./setup-code-signing.sh
 ```
+
+Or see [CODE_SIGNING_SETUP.md](CODE_SIGNING_SETUP.md) for manual setup instructions.
 
 The built app will be available in the `dist/` directory.
 

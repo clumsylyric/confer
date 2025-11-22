@@ -9,6 +9,28 @@ This guide walks you through setting up Apple code signing and notarization for 
 
 ---
 
+## 🚀 Quick Setup (Automated)
+
+Run the automated setup script:
+
+```bash
+./setup-code-signing.sh
+```
+
+This interactive script will:
+1. ✅ Create your Certificate Signing Request (CSR)
+2. ✅ Open the Apple Developer portal
+3. ✅ Guide you through certificate creation
+4. ✅ Install the certificate
+5. ✅ Create app-specific password
+6. ✅ Configure your .env file
+7. ✅ Verify everything is working
+8. ✅ Optionally build the signed app
+
+**Skip to the automated script or continue reading for manual setup instructions below.**
+
+---
+
 ## Step 1: Create Developer ID Certificate
 
 ### 1.1 Create Certificate Signing Request (CSR)
