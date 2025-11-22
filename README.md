@@ -29,17 +29,22 @@ npm run dev
 
 ### Build for macOS
 
+**Unsigned build (development only):**
 ```bash
 npm run build:mac
 ```
 
-The built app will be available in the `dist/` directory.
+**Signed & notarized build (for distribution):**
 
-### Build Universal Binary (Intel + Apple Silicon)
+See [CODE_SIGNING_SETUP.md](CODE_SIGNING_SETUP.md) for complete setup instructions.
 
 ```bash
-npm run build:mac:universal
+# After setting up code signing credentials:
+export $(cat .env | xargs)
+npm run build:mac
 ```
+
+The built app will be available in the `dist/` directory.
 
 ## Keyboard Shortcuts
 
